@@ -1,4 +1,4 @@
-body{
+.body, body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body{
     width: 400px;
     height: 300px;
     margin-top: 10%;
-    background: url("./bg.svg") no-repeat center center;
+    background: url("../Assets/bg.svg") no-repeat center center;
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(138, 138, 138, 0.19);
     transition: 0.5s !important;

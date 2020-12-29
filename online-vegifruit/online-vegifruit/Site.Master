@@ -44,17 +44,14 @@
 
 
         
-        <div class="container body-content">
+        <div class="w-100 h-100">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
         </div>
 
     </form>
 
-    <script src="~/AOS/dist/aos.js"></script>
+    
+
 </body>
 </html>
