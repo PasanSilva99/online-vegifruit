@@ -34,7 +34,7 @@
             <label for="#RememberPassword">Remember Me</label>
         </div>
         <div class="d-flex mt-4 w-75 justify-content-end">
-            <button class="login-btn">Login</button>
+            <asp:Button runat="server" ID="btn_login" class="login-btn" Text="Login" OnClick="btn_login_Click"></asp:Button>
         </div>
     </div>
 
