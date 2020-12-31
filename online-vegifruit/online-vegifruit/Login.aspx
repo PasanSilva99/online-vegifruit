@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="./Assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="./Content/style.css" />
+    <link rel="stylesheet" href="./Content/main.css" />
     <link rel="stylesheet" href="./Content/Login.css" />
     <link rel="stylesheet" href="./AOS/dist/aos.css" />
 </head>
-<body>
-    <form id="form1" runat="server" class="w-100 h-100 d-flex body">
+<body> 
+    <form id="form1" runat="server" class="w-100 h-100 d-flex body flex-column justify-content-center align-items-center">
         <div data-aos="fade-up" class="loginView card d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex mb-3">
             <span class="fs-2">Login</span>

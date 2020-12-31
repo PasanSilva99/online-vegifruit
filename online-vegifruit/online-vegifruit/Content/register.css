@@ -1,0 +1,208 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D6FFCF !important;
+    padding-bottom: 60px;
+}
+
+.RegisterView{
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 3%;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(138, 138, 138, 0.19);
+    transition: 0.5s !important;
+    border-radius: 2em 1em 2em 1em !important;
+    background-color: rgb(252, 255, 246);
+    width: 600px;
+    overflow: hidden;
+}
+
+.register-top{
+    display: flex;
+    justify-content: center;
+    background-image: url("../Assets/Images/regTop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:fixed;
+    width: 100%;
+    height: 125px;
+    padding-top: 25px;
+    color: ivory;
+    top: 0;
+    transition: 2s;
+    z-index: -1;
+}
+
+.register-top:active{
+    height: 120%;
+    z-index: -1;
+}
+
+.RegisterView:hover{
+    box-shadow: 0 4px 8px 0 rgba(221, 255, 218, 0.521), 0 6px 20px 0 rgba(133, 255, 198, 0.19);
+
+}
+
+.rounded-text{
+    border-color: #c5e7c6 !important;
+    box-shadow: 0 4px 8px 0 rgba(222, 253, 216, 0.719), 0 6px 20px 0 rgba(221, 252, 215, 0.5) !important;
+
+}
+
+.Register-btn{
+    border-radius: 2em 1em 2em 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-width: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #CEFCD0;
+    transition: 0.2s;
+    margin-right: 0.5vw;
+}
+
+.Register-btn:hover{
+    background-color: #D0FFD1;
+    box-shadow: 0 4px 8px 0 rgba(197, 197, 197, 0.5), 0 6px 20px 0 rgba(175, 255, 168, 0.548) !important;
+}
+
+.Register-btn:active{
+    background-color: #91B292;
+}
+
+.Register-btn:focus{
+    outline: none;
+}
+
+
+.back-login{
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+.back-login a{
+    float: right;
+    font-size: 12px;
+    margin-right: 6px;
+    transition: 0.2s;
+}
+
+.back-login a:hover{
+    float: right;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.back-login a:link{
+    text-decoration: none;
+}
+
+.rounded-text{
+    width: 350px;
+}
+
+.tb-address{
+    height: 120px;
+}
+
+.tb-address:focus{
+    outline: none;
+}
+
+.home{
+    position: fixed;
+    left: 20px;
+    top:20px
+}
+
+.nav-home{
+    width: 50px;
+    height: 50px;
+    background:url("../Assets/Images/home.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.nav-home:hover{
+    background:url("../Assets/Images/homeHover.svg") no-repeat;
+}
+
+.bottom-image{
+    position: fixed;
+    right: 0;
+    bottom: -20px;
+    width: 150px;
+    height: 150px;
+    background:url("../Assets/Images/PlantBG.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.bottom-image:active{
+    width: 165px;
+    height: 165px;
+}
+
+@media only screen and (max-width:640px){
+    .rounded-text{
+        width: 100% !important;
+    }
+
+    body{
+        margin: 0;
+        padding: 0 !important;
+    }
+
+    .RegisterView{
+        height: 100%;
+        width: 100%;
+        top:0 !important;
+        margin: 0 !important;
+    }
+
+    .home{
+        z-index: 10;
+        position: absolute;
+        float: right;
+        left: auto;
+        right: 30px;
+    }
+
+    .bottom-image{
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        transition: 0.7s;
+    }
+
+    ::-webkit-scrollbar:hover {
+        width: 15px;
+    }
+    .back-login{
+        background-color: lightblue;
+        padding: 10px;
+        border-radius: 2em 1em 2em 1em !important;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        
+
+    }
+
+    .Register-btn{
+        margin-bottom: 25px;
+    }
+
+    .bottom-reg{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
