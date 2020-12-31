@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div>
             <div class="home">
-        <a href="#"><div class="nav-home"></div></a>
+        <asp:HyperLink runat="server" ID="btn_home" NavigateUrl="#"><div class="nav-home"></div></asp:HyperLink>
     </div>
 
     <div
@@ -29,31 +29,31 @@
       <div class="table justify-content-center align-items-center p-4 pb-0">
         <div class="row mb-4">
           <span class="col-sm-3">First Name</span>
-          <input type="text" class="rounded-text col-sm-8" />
+          <asp:TextBox runat="server" ID="tb_FirstName" type="text" class="rounded-text col-sm-8" />
         </div>
         <div class="row mb-4">
           <span class="col-sm-3">Last Name</span>
-          <input type="text" class="rounded-text col-sm-8" />
+          <asp:TextBox runat="server" ID="tb_LastName" type="text" class="rounded-text col-sm-8" />
         </div>
         <div class="row mb-4">
           <span class="col-sm-3">NIC Number</span>
-          <input type="text" class="rounded-text col-sm-8" />
+          <asp:TextBox runat="server" ID="tb_NICnumber" type="text" class="rounded-text col-sm-8" />
         </div>
         <div class="row mb-4">
           <span class="col-sm-3">Email Address</span>
-          <input type="text" class="rounded-text col-sm-8" />
+          <asp:TextBox runat="server" ID="tb_EmailAddress" type="text" class="rounded-text col-sm-8" />
         </div>
         <div class="row mb-4">
           <span class="col-sm-3">Phone number</span>
-          <input type="text" class="rounded-text col-sm-8" />
+          <asp:TextBox runat="server" ID="tb_Phone" type="text" class="rounded-text col-sm-8" />
         </div>
         <div class="row mb-4">
           <span class="col-md-3">Address</span>
-          <textarea class="rounded-text col-8 tb-address pt-1"></textarea>
+          <asp:TextBox runat="server" ID="tb_Address" class="rounded-text col-8 tb-address pt-1"></asp:TextBox>
         </div>
         <div class="row mb-4 bottom-reg">
-            <a class="col-sm back-login" href="#">Back to Login</a>
-            <input type="button" value="Create" class="Register-btn col-sm-3" />
+            <asp:HyperLink runat="server" ID="backLogin" class="col-sm back-login" NavigateUrl="#" Text="Back to Login"></asp:HyperLink>
+            <asp:Button runat="server" ID="btn_Login" Text="Create" class="Register-btn col-sm-3" />
           </div>
       </div>
     </div>
