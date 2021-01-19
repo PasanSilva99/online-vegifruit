@@ -194,46 +194,11 @@
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Recent Products</h6>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Rice 10KG</strong></h6><span class="text-xs">10:30 AM</span>
-                                            </div>
-                                            <div class="col-auto"><a class="btn btn-info btn-circle ml-1" role="button"><i class="fas fa-info-circle text-white"></i></a></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Potatoes 13KG</strong></h6><span class="text-xs">11:30 AM</span>
-                                            </div><a class="btn btn-info btn-circle ml-1" role="button"><i class="fas fa-info-circle text-white"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Carrots 15KG</strong></h6><span class="text-xs">12:30 AM</span>
-                                            </div>
-                                            <div class="col-auto"><a class="btn btn-info btn-circle ml-1" role="button"><i class="fas fa-info-circle text-white"></i></a></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Carrots 15KG</strong></h6><span class="text-xs">12:30 AM</span>
-                                            </div>
-                                            <div class="col-auto"><a class="btn btn-info btn-circle ml-1" role="button"><i class="fas fa-info-circle text-white"></i></a></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Carrots 15KG</strong></h6><span class="text-xs">12:30 AM</span>
-                                            </div>
-                                            <div class="col-auto"><a class="btn btn-info btn-circle ml-1" role="button"><i class="fas fa-info-circle text-white"></i></a></div>
-                                        </div>
-                                    </li>
+                                <ul runat="server" id="myItems" class="list-group list-group-flush">
+
+                                    <!-- Item -->
+                                    
+                                    
                                     <li class="list-group-item list-group-item-secondary d-xl-flex justify-content-xl-center align-items-xl-center" style="padding-top: 5px;padding-bottom: 5px;"><span class="d-xl-flex justify-content-xl-center align-items-xl-center" style="width: 100%;text-align: center;font-size: 12px;margin-right: auto;margin-left: auto;">Show All</span></li>
                                 </ul>
                             </div>

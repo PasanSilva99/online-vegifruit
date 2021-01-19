@@ -9,6 +9,13 @@ using System.Data.SqlClient;
 
 namespace Vegifruit_Part_1
 {
+    public class ProductItem
+    {
+        public String name { get; set; } = " ";
+        public String weight { get; set; } = " ";
+        public String price { get; set; } = " ";
+    }
+
     public partial class dashboard : System.Web.UI.Page
     {
 
@@ -44,6 +51,7 @@ namespace Vegifruit_Part_1
             
             LoadChart();
             chrt_earnings.Series[0].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Area;
+            fillItemList();
         }
 
         protected void LoadChart()
@@ -64,7 +72,71 @@ namespace Vegifruit_Part_1
             
             chrt_earnings.DataBindTable(sdr, "updateDate");
 
+            sdr.Close();
 
+        }
+
+        protected void fillItemList()
+        {
+            List<ProductItem> productItems = new List<ProductItem>();
+
+            String qry = "SELECT product.name, product.amount, product.price FROM product INNER JOIN productState ON productState.productID = product.id AND nic=@nic ORDER BY productState.updateDate";
+
+            try
+            {
+
+                if (con.State == ConnectionState.Closed) con.Open();
+
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@nic", NIC);
+
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    String name = sdr.GetString(0);
+                    String amount = sdr.GetValue(1).ToString();
+                    String price = sdr.GetValue(2).ToString();
+
+                    productItems.Add(new ProductItem { name = name, weight = amount, price = price });
+                }
+                cmd.Dispose();
+                sdr.Close();
+
+                if(productItems.Count > 0)
+                {
+                    String CodeList = "";
+
+                    foreach(ProductItem item in productItems)
+                    {
+                        CodeList = CodeList + GenerateItem(item.name, item.weight, item.price);
+                    }
+
+                    myItems.InnerHtml = CodeList;
+                }
+            }
+            catch { }
+            finally
+            {
+               
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+
+        }
+
+        protected String GenerateItem(String ItemName, String ItemWeight, String ItemPrice)
+        {
+            String code = "<li class='list-group-item'> " +
+                                 "<div class='row align-items-center no-gutters'>" +
+                                       "<div class='col mr-2'>" +
+                                       "<h6 class='mb-0'>" +
+                                            "<strong>"+ItemName+" "+ItemWeight+" Kg</strong>" +
+                                       "</h6>" +
+                                       "<span class='text-xs'>Rs."+ItemPrice+"/=</span>" +
+                                 "</div>" +
+                          "</li>";
+
+            return code;
         }
 
 
