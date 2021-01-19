@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Vegifruit_Part_1
 {
     public partial class AddProduct : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Vegifruit\VegifruitDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         String NIC = "not-set";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -55,7 +54,7 @@ namespace Vegifruit_Part_1
             String savedimagepath = folderPath + @"/" + DateTime.Now.ToString("yyyyMMddhhmmss") + "." + file1[file1.Length - 1];
 
             string[] file2, file3, file4, file5;
-            String avedImagePath2, savedImagePath3, avedImagePath4, savedImagePath5;
+            String savedImagePath2=" ", savedImagePath3=" ", savedImagePath4=" ", savedImagePath5=" ";
 
             //Save the File to the Directory (Folder).
             ImageUpload1.SaveAs(folderPath + Path.GetFileName(savedimagepath));
@@ -65,38 +64,54 @@ namespace Vegifruit_Part_1
                 // Other images if the user has uploadted,.
                 if (ImageUpload2.FileName != null)
                 {
+                    file2 = ImageUpload2.FileName.Split('.');
+
                     //Save the File to the Directory (Folder).
                     ImageUpload2.SaveAs(folderPath + Path.GetFileName(ImageUpload2.FileName));
+
+                    savedImagePath2 = folderPath + @"/" + DateTime.Now.ToString("yyyyMMddhhmmss") + "." + file2[file2.Length - 1];
                 }
             }
             catch { }
             try
             {
                 // Other images if the user has uploadted,.
-                if (ImageUpload2.FileName != null)
+                if (ImageUpload3.FileName != null)
                 {
+                    file3 = ImageUpload3.FileName.Split('.');
+
                     //Save the File to the Directory (Folder).
-                    ImageUpload2.SaveAs(folderPath + Path.GetFileName(ImageUpload2.FileName));
+                    ImageUpload3.SaveAs(folderPath + Path.GetFileName(ImageUpload3.FileName));
+
+                    savedImagePath3 = folderPath + @"/" + DateTime.Now.ToString("yyyyMMddhhmmss") + "." + file3[file3.Length - 1];
                 }
             }
             catch { }
             try
             {
                 // Other images if the user has uploadted,.
-                if (ImageUpload2.FileName != null)
+                if (ImageUpload4.FileName != null)
                 {
+                    file4 = ImageUpload4.FileName.Split('.');
+
                     //Save the File to the Directory (Folder).
-                    ImageUpload2.SaveAs(folderPath + Path.GetFileName(ImageUpload2.FileName));
+                    ImageUpload4.SaveAs(folderPath + Path.GetFileName(ImageUpload4.FileName));
+
+                    savedImagePath4 = folderPath + @"/" + DateTime.Now.ToString("yyyyMMddhhmmss") + "." + file4[file4.Length - 1];
                 }
             }
             catch { }
             try
             {
                 // Other images if the user has uploadted,.
-                if (ImageUpload2.FileName != null)
+                if (ImageUpload5.FileName != null)
                 {
+                    file5 = ImageUpload5.FileName.Split('.');
+
                     //Save the File to the Directory (Folder).
-                    ImageUpload2.SaveAs(folderPath + Path.GetFileName(ImageUpload2.FileName));
+                    ImageUpload5.SaveAs(folderPath + Path.GetFileName(ImageUpload5.FileName));
+
+                    savedImagePath5 = folderPath + @"/" + DateTime.Now.ToString("yyyyMMddhhmmss") + "." + file5[file5.Length - 1];
 
                 }
             }
