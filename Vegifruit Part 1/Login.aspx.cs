@@ -124,11 +124,11 @@ namespace Vegifruit_Part_1
                         String priev = sdrstaff.GetString(3);
                         Session["priv"] = priev;
 
-                        if (priev == "doa")
+                        if (priev.Contains("doa"))
                         {
                             Response.Redirect("staffDashboard", false);
                         }
-                        else if (priev == "keells")
+                        else if (priev.Contains("keells"))
                         {
                             Response.Redirect("keellsDashboard", false);
                         }
