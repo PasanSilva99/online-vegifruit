@@ -35,8 +35,8 @@
                                         </asp:Panel>
                                     </div>
                                     <div class="user">
-                                        <div class="form-group"><asp:TextBox runat="server" ID="tb_email" class="form-control form-control-user" type="email" data-aos="fade-right" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" style="height:50px; border-radius:2em;"/></div>
-                                        <div class="form-group"><asp:TextBox runat="server" ID="tb_psw" class="form-control form-control-user" type="password" data-aos="fade-right" placeholder="Password" name="password" style="height:50px; border-radius:2em;"/></div>
+                                        <div class="form-group"><asp:TextBox runat="server" ID="tb_email" class="form-control form-control-user" type="email" data-aos="fade-right" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" style="height:50px; border-radius:2em;" required/></div>
+                                        <div class="form-group"><asp:TextBox runat="server" ID="tb_psw" class="form-control form-control-user" type="password" data-aos="fade-right" placeholder="Password" name="password" style="height:50px; border-radius:2em;" required/></div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <div class="form-check" data-aos="fade-right"><asp:CheckBox runat="server" ID="chb_rememberMe" class="form-check-input custom-control-input" type="checkbox"/><label class="form-check-label custom-control-label" for="chb_rememberMe">Remember Me</label></div>
