@@ -116,12 +116,12 @@ namespace Vegifruit_Part_1
                     while (sdrstaff.Read())
                     {
                         isStaff = true;
-                        fName = sdr.GetString(0);
-                        lName = sdr.GetString(1);
+                        fName = sdrstaff.GetString(0);
+                        lName = sdrstaff.GetString(1);
 
                         Session["FullName"] = fName + " " + lName;
-                        Session["loggedNIC"] = sdr.GetString(2);
-                        String priev = sdr.GetString(3);
+                        Session["loggedNIC"] = sdrstaff.GetString(2);
+                        String priev = sdrstaff.GetString(3);
                         Session["priv"] = priev;
 
                         if (priev == "doa")
