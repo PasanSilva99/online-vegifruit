@@ -101,9 +101,69 @@ namespace Vegifruit_Part_1
                 }
             }
             catch { }
+            // Send the captured data to the database
+
+            SaveProduct(ProductName, Weight, Price, LatLng, savedimagepath, savedImagePath2, savedImagePath3, savedImagePath4, savedImagePath5);
+
+        }
+
+        private void SaveProduct(string productName, string weight, string price, string latLng, string savedimagepath, string savedImagePath2, string savedImagePath3, string savedImagePath4, string savedImagePath5)
+        {
+            try {
+
+                if (con.State == ConnectionState.Closed) con.Open();
+
+                String QRY1 = "INSERT INTO Product " +
+                    "VALUES (@id, @name, @amount, @type, @price, @image1, @image2, @image3, @image4, @image5, @location)";
 
 
+                String GeneratedID = "PRD" + DateTime.Now.ToString("yyyyMMddhhmmss");
 
+                SqlCommand cmd = new SqlCommand(QRY1, con);
+                cmd.Parameters.AddWithValue("@id", GeneratedID);
+                cmd.Parameters.AddWithValue("@name", productName);
+                cmd.Parameters.AddWithValue("@amount", weight);
+                cmd.Parameters.AddWithValue("@type", " Kg");
+                cmd.Parameters.AddWithValue("@price", float.Parse(price));
+                cmd.Parameters.AddWithValue("@image1", savedimagepath);
+                cmd.Parameters.AddWithValue("@image2", savedImagePath2);
+                cmd.Parameters.AddWithValue("@image3", savedImagePath3);
+                cmd.Parameters.AddWithValue("@image4", savedImagePath4);
+                cmd.Parameters.AddWithValue("@image5", savedImagePath5);
+                cmd.Parameters.AddWithValue("@location", latLng);
+
+                // Execute the Quary with a vr to save the row count
+                int rowCount1 = cmd.ExecuteNonQuery();
+
+                String QRY2 = "INSERT INTO productOwner VALUES(@productID, @nic)";
+
+                cmd.Dispose();
+
+                SqlCommand cmd2 = new SqlCommand(QRY2, con);
+                cmd2.Parameters.AddWithValue("@productID", GeneratedID);
+                cmd2.Parameters.AddWithValue("@nic", NIC);
+
+                cmd2.Dispose();
+
+                String QRY3 = "INSERT INTO productState VALUES (@id, @nic, @status, @date)";
+                SqlCommand cmd3 = new SqlCommand(QRY3, con);
+                cmd3.Parameters.AddWithValue("@id", GeneratedID);
+                cmd3.Parameters.AddWithValue("@nic", NIC);
+                cmd3.Parameters.AddWithValue("@status", "Pending");
+                cmd3.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+
+                int rowCount3 = cmd3.ExecuteNonQuery();
+
+                cmd3.Dispose();
+            }
+            catch(Exception exc)
+            {
+                Response.Redirect("Login?message=" + exc.Message);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+            }
         }
     }
 }
