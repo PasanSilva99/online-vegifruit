@@ -66,7 +66,7 @@ namespace Vegifruit_Part_1
             {
                 if (con.State == ConnectionState.Closed) con.Open();
 
-                String qry = "SELECT count(*), Nic FROM Farmer WHERE Email=@email AND Password=@psw";
+                String qry = "SELECT Nic FROM Farmer WHERE Email=@email AND Password=@psw";
 
                 SqlCommand cmd = new SqlCommand(qry, con);
                 cmd.Parameters.AddWithValue("@email", tb_email.Text);
@@ -79,53 +79,54 @@ namespace Vegifruit_Part_1
 
                 SqlDataReader sdr = cmd.ExecuteReader();
 
+                bool isFarmer = false;
+
                 while (sdr.Read())
                 {
-                    res = sdr.GetInt32(0);
-
-                    if (res > 0)
-                    {
-                        Response.Redirect("dashboard", false);
-                        Session["loggedNIC"] = sdr.GetString(1);
-                        Session["priv"] = "Farmer";
-                    }
-                    else
-                    {
-                        String qrystaff = "SELECT count(*), Nic, type FROM Staff WHERE Email=@email AND Password=@psw";
-
-                        SqlCommand cmdstaff = new SqlCommand(qry, con);
-                        cmd.Parameters.AddWithValue("@email", tb_email.Text);
-
-                        String passwordHashstaff = CreateMD5(tb_psw.Text);
-
-                        cmd.Parameters.AddWithValue("@psw", passwordHashstaff);
-
-                        int resstaff = 0;
-
-                        SqlDataReader sdrstaff = cmd.ExecuteReader();
-
-                        while (sdrstaff.Read())
-                        {
-                            resstaff = sdrstaff.GetInt32(0);
-
-                            if (resstaff > 0)
-                            {
-                                Session["loggedNIC"] = sdrstaff.GetString(1);
-                                Session["priv"] = sdrstaff.GetString(2);
-                            }
-                            else
-                            {
-
-                            }
-                        }
-                    }
+                    Response.Redirect("dashboard", false);
+                    Session["loggedNIC"] = sdr.GetString(0);
+                    Session["priv"] = "Farmer";
+                    isFarmer = true;
                 }
 
-                
-            }
-            catch
-            {
+                sdr.Close();
 
+                bool isStaff = false;
+
+                if (!(isFarmer))
+                {
+                    String qrystaff = "SELECT Nic, type FROM Staff WHERE Email=@email AND Password=@psw";
+
+                    SqlCommand cmdstaff = new SqlCommand(qrystaff, con);
+                    cmdstaff.Parameters.AddWithValue("@email", tb_email.Text);
+
+                    String passwordHashstaff = CreateMD5(tb_psw.Text);
+
+                    cmdstaff.Parameters.AddWithValue("@psw", passwordHashstaff);
+
+                    cmd.Dispose();
+                    
+                    SqlDataReader sdrstaff = cmdstaff.ExecuteReader();
+
+                    while (sdrstaff.Read())
+                    {
+                        isStaff = true;
+                        Session["loggedNIC"] = sdrstaff.GetString(0);
+                        Session["priv"] = sdrstaff.GetString(1);
+                        Response.Redirect("Login?message='test1'", false);
+                    }
+                         
+                }
+
+                if (!(isFarmer) && !(isStaff))
+                {
+                    Response.Redirect("Login?message='Login Failed. Please check your Email and Password. If you're not registered to the system, Please Register first.'", false);
+                }
+
+            }
+            catch(Exception exc)
+            {
+                Response.Redirect("Login?message='" + exc.Message + "'");
             }
         }
 
