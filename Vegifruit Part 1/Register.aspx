@@ -41,23 +41,23 @@
 
 
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox runat="server" ID="tb_firstName" class="form-control form-control-user" type="text" placeholder="First Name" name="first_name" style="border-radius:2em; height:50px;"></asp:TextBox></div>
-                                    <div class="col-sm-6"><asp:TextBox runat="server" ID="tb_lastName" class="form-control form-control-user" type="text" placeholder="Last Name" name="last_name" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox required runat="server" ID="tb_firstName" class="form-control form-control-user" type="text" placeholder="First Name" name="first_name" style="border-radius:2em; height:50px;"></asp:TextBox></div>
+                                    <div class="col-sm-6"><asp:TextBox  required runat="server" ID="tb_lastName" class="form-control form-control-user" type="text" placeholder="Last Name" name="last_name" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
                                 </div>
-                                <div class="form-group"><asp:TextBox runat="server" ID="tb_emailAddress" class="form-control form-control-user" type="email" aria-describedby="emailHelp" placeholder="Email Address" name="email" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
-                                <div class="form-group"><asp:TextBox runat="server" ID="tb_phoneNumber" class="form-control form-control-user" type="number" aria-describedby="Phone Number" placeholder="Phone Number" name="phone" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
-                                <div class="form-group"><asp:TextBox runat="server" ID="tb_nic" class="form-control form-control-user" type="text" aria-describedby="NIC" placeholder="National Identity Card Number" name="nic" MaxLength="12" style="height: 50px;border-radius: 2em;"></asp:TextBox>
+                                <div class="form-group"><asp:TextBox  required runat="server" ID="tb_emailAddress" class="form-control form-control-user" type="email" aria-describedby="emailHelp" placeholder="Email Address" name="email" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                <div class="form-group"><asp:TextBox required runat="server" ID="tb_phoneNumber" class="form-control form-control-user" type="number" aria-describedby="Phone Number" placeholder="Phone Number" name="phone" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                <div class="form-group"><asp:TextBox required runat="server" ID="tb_nic" class="form-control form-control-user" type="text" aria-describedby="NIC" placeholder="National Identity Card Number" name="nic" MaxLength="12" style="height: 50px;border-radius: 2em;"></asp:TextBox>
                                 </div>
                                 <asp:Label runat="server" ID="warningNic" Text="Please enter a valid NIC" CssClass="text-danger" style="margin-left:20px; float:right"></asp:Label>
-                                <div class="form-group"><asp:TextBox runat="server" ID="tb_add_l1" class="form-control form-control-user" type="text" aria-describedby="Address Line 1" placeholder="Address Line 1" name="address_line_1" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                <div class="form-group"><asp:TextBox required runat="server" ID="tb_add_l1" class="form-control form-control-user" type="text" aria-describedby="Address Line 1" placeholder="Address Line 1" name="address_line_1" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
                                 <div class="form-group"><asp:TextBox runat="server" ID="tb_add_l2" class="form-control form-control-user" type="text" aria-describedby="Address Line 2" placeholder="Address Line 2 (Optional)" name="address_line_2" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox runat="server" ID="tb_city" class="form-control" type="text" style="border-radius: 2em;height: 50px;" placeholder="City"></asp:TextBox></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox required runat="server" ID="tb_city" class="form-control" type="text" style="border-radius: 2em;height: 50px;" placeholder="City"></asp:TextBox></div>
                                     <div class="col-sm-6" style="border-radius: 2em;height: 50px;"><asp:TextBox runat="server" ID="tb_zipCode" class="form-control" type="text" style="border-radius: 2em;height: 50px;" placeholder="ZIP Code"></asp:TextBox></div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox runat="server" ID="tb_psw" class="form-control form-control-user" type="password" placeholder="Password" name="password" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
-                                    <div class="col-sm-6"><asp:TextBox runat="server" ID="tb_rptpsw" class="form-control form-control-user" type="password" placeholder="Retype Password" name="password_repeat" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><asp:TextBox required runat="server" ID="tb_psw" class="form-control form-control-user" type="password" placeholder="Password" name="password" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
+                                    <div class="col-sm-6"><asp:TextBox required runat="server" ID="tb_rptpsw" class="form-control form-control-user" type="password" placeholder="Retype Password" name="password_repeat" style="height: 50px;border-radius: 2em;"></asp:TextBox></div>
                                     <div class="d-flex w-100" style="align-items:end; justify-items:end; justify-content:end;">
                                        
                                         <asp:ScriptManager ID="ScriptManager1" runat="server"/>

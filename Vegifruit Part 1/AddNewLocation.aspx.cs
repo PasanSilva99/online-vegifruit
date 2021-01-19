@@ -13,7 +13,7 @@ namespace Vegifruit_Part_1
     public partial class AddNewLocation : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pasan\OneDrive\Documents\VegifruitDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vegifruit\VegifruitDB.mdf;Integrated Security=True;Connect Timeout=30");
 
         protected void Page_Load(object sender, EventArgs e)
         {
