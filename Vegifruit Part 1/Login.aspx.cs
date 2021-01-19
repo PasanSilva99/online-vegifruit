@@ -66,7 +66,7 @@ namespace Vegifruit_Part_1
             {
                 if (con.State == ConnectionState.Closed) con.Open();
 
-                String qry = "SELECT Nic FROM Farmer WHERE Email=@email AND Password=@psw";
+                String qry = "SELECT FirstName, LastName, Nic FROM Farmer WHERE Email=@email AND Password=@psw";
 
                 SqlCommand cmd = new SqlCommand(qry, con);
                 cmd.Parameters.AddWithValue("@email", tb_email.Text);
@@ -81,10 +81,15 @@ namespace Vegifruit_Part_1
 
                 bool isFarmer = false;
 
+                String fName="", lName="", FullName="";
+
                 while (sdr.Read())
                 {
                     Response.Redirect("dashboard", false);
-                    Session["loggedNIC"] = sdr.GetString(0);
+                    fName = sdr.GetString(0);
+                    lName = sdr.GetString(1);
+                    Session["FullName"] = fName + " " + lName;
+                    Session["loggedNIC"] = sdr.GetString(2);
                     Session["priv"] = "Farmer";
                     isFarmer = true;
                 }
