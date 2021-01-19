@@ -44,8 +44,8 @@
                                         </div><asp:Button runat="server" class="btn btn-primary btn-block text-white btn-user" data-aos="fade-right" type="submit" style="background: #F39129; border-radius:2em; height:50px" Text="Login" OnClick="login_Click"></asp:Button>
                                         <hr/>
                                     </div>
-                                    <div class="text-center"><a data-aos="fade-up" class="small" href="forgot-password.html">Forgot Password?</a></div>
-                                    <div class="text-center"><a class="pulse animated small" href="register.html">Create an Account!</a></div>
+                                    <div class="text-center"><a data-aos="fade-up" class="small" href="ForgotPassword.aspx">Forgot Password?</a></div>
+                                    <div class="text-center"><a class="pulse animated small" href="Register.aspx">Create an Account!</a></div>
                                 </div>
                             </div>
                         </div>
