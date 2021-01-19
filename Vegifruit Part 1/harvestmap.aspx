@@ -25,13 +25,14 @@
                 </a>
                 <hr class="sidebar-divider my-0"/>
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item" style="margin-top: 70px;"><a class="nav-link" href="home.html"><i class="fa fa-home"></i><span>Home</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="harvest-map.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-map">
+                    <li class="nav-item" style="margin-top: 70px;"><a class="nav-link active" href="publicHome.aspx"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="harvestmap.aspx"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-map">
                                 <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98l4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"></path>
                             </svg><span>&nbsp; Harvest - Map</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="harvest-analyse.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-graph-up">
+                    <li class="nav-item"><a class="nav-link" href="harvestanalyse.aspx"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-graph-up">
                                 <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"></path>
                             </svg><span>&nbsp; Harvest - Analyse</span></a></li>
+                     <li class="nav-item"><a class="nav-link" href="Login.aspx"><img class="log-in-icon" src="assets/img/keylogin.png" alt="navigation-login" /><span>&nbsp; Log In</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -46,11 +47,9 @@
                             </div>
                         </div>
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"><button class="btn btn-primary" type="button" style="background: rgb(249,161,1);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-leaf">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M5 21c.5 -4.5 2.5 -8 7 -10"></path>
-                                        <path d="M9 18c6.218 0 10.5 -3.288 11 -12v-2h-4.014c-9 0 -11.986 4 -12 9c0 1 0 3 2 5h3z"></path>
-                                    </svg>&nbsp; Sell Your Harvest</button></li>
+                            <li class="nav-item">
+                                <asp:Button runat ="server" class="btn btn-primary"  type="button" style="background: rgb(249,161,1);"  Text ="Sell Your Harvest" OnClick ="openRegister"> </asp:Button>
+                            </li>
                         </ul>
                     </div>
                 </nav>

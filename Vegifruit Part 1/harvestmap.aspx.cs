@@ -13,5 +13,10 @@ namespace Vegifruit_Part_1
         {
 
         }
+
+        protected void openRegister (object sender, EventArgs e)
+        {
+            Response.Redirect("Register", false);
+        }
     }
 }
