@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-7 col-xl-8">
+                        <div class="col col-xl-8" style="width:650px">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0">Earnings Overview</h6>
@@ -173,9 +173,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <asp:Chart ID="chrt_earnings" runat="server" ChartType="Area">
+
+                                <!-- Revenue Chart -->
+                                <div class="card-body" style="width:600px!important;">
+                                    <div style="width:600px">
+                                        <asp:Chart ID="chrt_earnings" runat="server" Width="600">
                                             <Series>
                                                 
                                             </Series>
