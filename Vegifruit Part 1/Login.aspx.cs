@@ -132,6 +132,10 @@ namespace Vegifruit_Part_1
                         {
                             Response.Redirect("keellsDashboard", false);
                         }
+                        else if (priev.Contains("admin"))
+                        {
+                            Response.Redirect("adminHome", false);
+                        }
 
 
                     }
