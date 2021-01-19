@@ -38,9 +38,9 @@
                     </a>
                     <hr class="sidebar-divider my-0" />
                     <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                        <li class="nav-item"><a class="nav-link" href="staffMap.aspx"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="staffPurchase.aspx"><i class="fas fa-table"></i><span>Table</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="staffDashboard.aspx"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="staffDashboard.aspx"> <i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="staffPurchase.aspx"><i class="fas fa-table"></i><span>Purchace Details</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="staffMap.aspx"><i class="fas fa-user-circle"></i><span>Harvest Map</span></a></li>
 
                     </ul>
                     <div class="text-center d-none d-md-inline">
