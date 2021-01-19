@@ -33,12 +33,12 @@ namespace Vegifruit_Part_1
         protected global::System.Web.UI.WebControls.TextBox data;
 
         /// <summary>
-        /// input control.
+        /// tb_search2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox input;
+        protected global::System.Web.UI.WebControls.TextBox tb_search2;
     }
 }
