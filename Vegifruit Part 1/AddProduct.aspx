@@ -46,11 +46,11 @@
 
                                     <div class="form-group">
                                         <label>Upload up to 5 Images</label>
-                                        <asp:FileUpload ID="ImageUpload1" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" onChange="ImagePreview(this)" />
-                                        <asp:FileUpload ID="ImageUpload2" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" onChange="" />
-                                        <asp:FileUpload ID="ImageUpload3" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" onChange="" />
-                                        <asp:FileUpload ID="ImageUpload4" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" onChange="" />
-                                        <asp:FileUpload ID="ImageUpload5" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" onChange="" />
+                                        <asp:FileUpload ID="ImageUpload1" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" required />
+                                        <asp:FileUpload ID="ImageUpload2" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" />
+                                        <asp:FileUpload ID="ImageUpload3" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" />
+                                        <asp:FileUpload ID="ImageUpload4" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" />
+                                        <asp:FileUpload ID="ImageUpload5" runat="server" class="form-control" Style="border-radius: 2em; height: 50px; border: 0;" />
 
                                         <div class="form-group">
                                             <label>Select Location</label>
@@ -113,7 +113,7 @@
                                                 <div id="map" style="width: 100%; height: 80vh; background-color: antiquewhite;"></div>
                                             </div>
                                         </div>
-                                        <asp:Button runat="server" class="btn btn-primary btn-block text-white btn-user" Style="background: #4E8D02; border-style: none;" Text="Save"></asp:Button>
+                                        <asp:Button runat="server" class="btn btn-primary btn-block text-white btn-user" Style="background: #4E8D02; border-style: none;" Text="Save" OnClick="Save"></asp:Button>
                                         <hr />
                                     </div>
                                     <div class="text-center"><a class="small" href="index.html">Back to Dashboard</a></div>
