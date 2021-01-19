@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css"/>
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css"/>
     <link rel="stylesheet" href="assets/css/Team-Clean.css"/>
+    
+    <
 </head>
     
 
@@ -35,12 +37,10 @@
                 </a>
                 <hr class="sidebar-divider my-0"/>
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Login</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="staffMap.aspx"> <i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="staffPurchase.aspx"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="staffDashboard.aspx"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+                    
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
                 <div class="container d-xl-flex align-items-xl-end">
@@ -192,7 +192,7 @@
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0">Successful Transaction</h6>
-                                    <div class="dropdown no-arrow"><asp:button runat="server" ID="btn2" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"/><i class="fas fa-ellipsis-v text-gray-400"></i></asp:button>
+                                    <div class="dropdown no-arrow"><asp:button runat="server" ID="btn2" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></asp:button>
                                         <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item"
                                                 href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
