@@ -100,7 +100,7 @@ namespace Vegifruit_Part_1
 
                 if (!(isFarmer))
                 {
-                    String qrystaff = "SELECT Nic, type FROM Staff WHERE Email=@email AND Password=@psw";
+                    String qrystaff = "SELECT firstName, lastName, nic, type type FROM Staff WHERE Email=@email AND Password=@psw";
 
                     SqlCommand cmdstaff = new SqlCommand(qrystaff, con);
                     cmdstaff.Parameters.AddWithValue("@email", tb_email.Text);
@@ -116,9 +116,24 @@ namespace Vegifruit_Part_1
                     while (sdrstaff.Read())
                     {
                         isStaff = true;
-                        Session["loggedNIC"] = sdrstaff.GetString(0);
-                        Session["priv"] = sdrstaff.GetString(1);
-                        Response.Redirect("Login?message='test1'", false);
+                        fName = sdr.GetString(0);
+                        lName = sdr.GetString(1);
+
+                        Session["FullName"] = fName + " " + lName;
+                        Session["loggedNIC"] = sdr.GetString(2);
+                        String priev = sdr.GetString(3);
+                        Session["priv"] = priev;
+
+                        if (priev == "doa")
+                        {
+                            Response.Redirect("staffDashboard", false);
+                        }
+                        else if (priev == "keells")
+                        {
+                            Response.Redirect("keellsDashboard", false);
+                        }
+
+
                     }
                          
                 }

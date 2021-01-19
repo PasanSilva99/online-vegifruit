@@ -9,6 +9,9 @@ namespace Vegifruit_Part_1
 {
     public partial class dashboard : System.Web.UI.Page
     {
+
+        String DispayName = ""; 
+
         /// <summary>
         /// Che wether the session is null.
         /// </summary>
@@ -25,7 +28,13 @@ namespace Vegifruit_Part_1
         protected void Page_Load(object sender, EventArgs e)
         {
             // get the user name form the saved cookie. If it is not exists, Redirect to the Login Page.
-
+            if (checkSession("FullName"))
+            {
+                DispayName = Session["FullName"].ToString();
+                lbl_DisplayName.Text = DispayName; // Assign the text to the label that displays the user's name
+            }
+            else
+                Response.Redirect("Login?message=Please%20Login%20First", false);
         }
 
 
