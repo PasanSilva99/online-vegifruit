@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
@@ -19,9 +19,10 @@
 </head>
 
 <body id="page-top">
+
     <form id="purchase" runat="server">
         
-<div id="wrapper">
+    <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(37,38,37);">
             <div class="container-fluid d-flex flex-column p-0">
                 <div class="container">
@@ -50,20 +51,20 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><asp:button runat="server" class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"/><i class="fas fa-bars"></i></asp:button>
+                    <div class="container-fluid"><asp:button runat="server" class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"/>
                         <div class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"/>
                             <div class="input-group"><asp:textBox runat="server" ID="search" class="bg-light form-control border-0 small" type="text" placeholder="Search for ..." style="background: rgb(37,44,30);"/>
-                                <div class="input-group-append"><asp:button runat="server" class="btn btn-primary py-0" type="button" style="background: #2e4;"/><i class="fas fa-search" style="background: #2e4;"></i></asp:button></div>
+                                <div class="input-group-append"><asp:button runat="server" class="btn btn-primary py-0" type="button" style="background: #2e4;"/></div>
                             </div>
-                        </form>
+                        </div>
                         <ul class="nav navbar-nav flex-nowrap ml-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
-                                    <class="form-inline mr-auto navbar-search w-100">
+                                    <div class="form-inline mr-auto navbar-search w-100">
                                         <div class="input-group"><asp:textBox runat="server" ID="Sub" class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."/>
-                                            <div class="input-group-append"><asp:button runat="server" class="btn btn-primary py-0" type="button"/><i class="fas fa-search"></i></asp:button></div>
+                                            <div class="input-group-append"><asp:button runat="server" class="btn btn-primary py-0" type="button"/></div>
                                         </div>
-                                    </>
+                                    </div>
                                 </div>
                             </li>
                             <li class="nav-item dropdown no-arrow mx-1">
@@ -99,7 +100,7 @@
                             </li>
                             <li class="nav-item dropdown no-arrow"></li>
                         </ul>
-                    </div>
+                    
                 </nav>
                 <div class="container-fluid" style="background: var(--white);">
                     <h3 class="text-dark mb-4" style="background: #ffffff;color: rgb(9,31,18);font-weight: 900;">Purchase Details</h3>
@@ -136,87 +137,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>05/10/2020</td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg"/>R.M.Siriyalatha</td>
-                                            <td>Carrot</td>
-                                            <td>V</td>
-                                            <td>15</td>
-                                            <td>150</td>
-                                            <td>2250</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar2.jpeg"/>V.S.Kusum</td>
-                                            <td>Mango</td>
-                                            <td>F</td>
-                                            <td>80</td>
-                                            <td>20</td>
-                                            <td>1600</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar3.jpeg"/>R.A.Somapala</td>
-                                            <td>Leeks</td>
-                                            <td>V</td>
-                                            <td>10.500</td>
-                                            <td>120</td>
-                                            <td>1260</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar4.jpeg"/>T.D.Piyadasa</td>
-                                            <td>paddy</td>
-                                            <td>R</td>
-                                            <td>278.200</td>
-                                            <td>65</td>
-                                            <td>18,083</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg"/>Maithripala Sirisena</td>
-                                            <td>Cucumber</td>
-                                            <td>V</td>
-                                            <td>46</td>
-                                            <td>15</td>
-                                            <td>690</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg"/>Dalas Alahapperuma</td>
-                                            <td>Rambutan</td>
-                                            <td>F</td>
-                                            <td>2500</td>
-                                            <td>3</td>
-                                            <td>7500</td>
-                                        </tr>
-                                        <tr>
-                                            <td><br/></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar3.jpeg"/>D.D.Gunasena</td>
-                                            <td>Durian</td>
-                                            <td>F</td>
-                                            <td>168</td>
-                                            <td>200</td>
-                                            <td>33,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>27/12/2020</td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar3.jpeg"/>K.Kamal</td>
-                                            <td>Gotukola</td>
-                                            <td>V</td>
-                                            <td>240</td>
-                                            <td>10</td>
-                                            <td>2400</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar4.jpeg"/>Pavithra</td>
-                                            <td>Paddy</td>
-                                            <td>R</td>
-                                            <td>520</td>
-                                            <td>65</td>
-                                            <td>33800</td>
-                                        </tr>
+                                       
                                         <tr>
                                             <td></td>
                                             <td><img class="rounded-circle mr-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg"/>V. Weerawansha</td>
@@ -258,15 +179,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-    </div>
+            </div>
+        </div>
     </form>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
