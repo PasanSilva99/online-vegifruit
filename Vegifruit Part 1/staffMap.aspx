@@ -116,12 +116,19 @@
                             </div>
                             <div class="card-body" style="width: 100%; height: 70vh; border-color: rgb(33,46,143);">
                                 <div class="d-flex flex-row flex-shrink-0" style="width: 100%; height: 70vh; color: var(--cyan); background: #a72626;">
-                                    <div class="d-xl-flex justify-content-xl-end" style="width: 30%; height: 70vh; color: var(--success); background: var(--white); margin-bottom: 10px;">
-                                        <img src="" style="margin-right: 20px; padding-top: 0;" />
-                                        <div></div>
+                                    <div class="d-xl-flex bg-danger" style="width: 30%; height: 70vh; color: var(--success); background: var(--white); margin-bottom: 10px;">
+                                        <div class="card">
+                                            <div class="card-header w-100">
+                                                <span>Rice 10KG</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-row flex-shrink-0 justify-content-xl-end align-items-xl-start" style="width: 70%; height: 70vh; background: var(--white);">
+
+                                    <!--Map Loader-->
+                                    <div runat="server" id="map_loader" class="bg-dark" style="width: 70%;height: 70vh;">
+                                            
                                     </div>
+
                                 </div>
                             </div>
                         </div>

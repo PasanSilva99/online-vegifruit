@@ -107,7 +107,7 @@
                             <div class="col-lg-4">
                                 <div class="card mb-3">
                                     <div class="card-body text-center shadow">
-                                        <img class="rounded-circle mb-3 mt-4" src="assets/img/profile.jpg" width="160" height="160" />
+                                        <img runat="server" id="img_profPic" class="rounded-circle mb-3 mt-4" src="assets/img/profile.jpg" width="160" height="160" />
                                         <div class="mb-3">
                                             <asp:Button runat="server" class="btn btn-primary btn-sm" type="button" Text="Change Photo" OnClick="savePic_Click"></asp:Button></div>
                                     </div>
@@ -176,21 +176,21 @@
                                                     <div class="form-row">
                                                         <div class="col">
                                                             <div class="form-group">
-                                                                <label for="username"><strong>Username</strong></label><asp:TextBox runat="server" ID="tb_UserName" class="form-control" type="text" placeholder="User name" name="username" value="Mr. Brown Rabbit"></asp:TextBox></div>
+                                                                <label for="username"><strong>Username</strong></label><asp:TextBox runat="server" ID="tb_UserName" class="form-control" type="text" placeholder="User name" name="username" value="Mr. Brown Rabbit" required></asp:TextBox></div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="form-group">
-                                                                <label for="email"><strong>Email Address</strong></label><asp:TextBox runat="server" ID="tb_email" class="form-control" type="email" placeholder="user@example.com" name="email" value="brownrabbit@gmail.com"></asp:TextBox></div>
+                                                                <label for="email"><strong>Email Address</strong></label><asp:TextBox runat="server" ID="tb_email" class="form-control" type="email" placeholder="user@example.com" name="email" value="brownrabbit@gmail.com" readonly></asp:TextBox></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="col">
                                                             <div class="form-group">
-                                                                <label for="first_name"><strong>First Name</strong></label><asp:TextBox runat="server" ID="tb_firstName" class="form-control" type="text" placeholder="First Name" name="first_name" value="Brown"></asp:TextBox></div>
+                                                                <label for="first_name"><strong>First Name</strong></label><asp:TextBox runat="server" ID="tb_firstName" class="form-control" type="text" placeholder="First Name" name="first_name" value="Brown" required></asp:TextBox></div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="form-group">
-                                                                <label for="last_name"><strong>Last Name</strong></label><asp:TextBox runat="server" ID="tb_lastName" class="form-control" type="text" placeholder="Last Name" name="last_name" value="Rabbit"></asp:TextBox></div>
+                                                                <label for="last_name"><strong>Last Name</strong></label><asp:TextBox runat="server" ID="tb_lastName" class="form-control" type="text" placeholder="Last Name" name="last_name" value="Rabbit" required></asp:TextBox></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -205,7 +205,7 @@
                                             <div class="card-body">
                                                 <div>
                                                     <div class="form-group">
-                                                        <label for="address"><strong>Address</strong></label><asp:TextBox runat="server" ID="tb_address" class="form-control" type="text" placeholder="Sunset Blvd, 38" name="address" value="Sunset Blvd, 38"></asp:TextBox><label for="address" style="margin-top: 10px;"><strong>Phone Number</strong></label><asp:TextBox runat="server" ID="tb_phone" class="form-control" type="text" placeholder="Phone Number" name="address" value="070 498 2367"></asp:TextBox></div>
+                                                        <label for="address"><strong>Address</strong></label><asp:TextBox runat="server" ID="tb_address" class="form-control" type="text" placeholder="Sunset Blvd, 38" name="address" value="Sunset Blvd, 38" required></asp:TextBox><label for="address" style="margin-top: 10px;"><strong>Phone Number</strong></label><asp:TextBox runat="server" ID="tb_phone" class="form-control" type="text" placeholder="Phone Number" name="address" value="070 498 2367" required></asp:TextBox></div>
 
                                                     <div class="form-group">
                                                         <asp:Button runat="server" class="btn btn-primary btn-sm" type="submit" Text="Save Settings" OnClick="saveContacts_Click"></asp:Button></div>

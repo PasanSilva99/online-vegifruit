@@ -39,7 +39,6 @@ namespace Vegifruit_Part_1
             else
                 Response.Redirect("Login?message=Please%20Login%20First", false);
 
-
             loadUser();
 
         }
@@ -82,6 +81,8 @@ namespace Vegifruit_Part_1
                         tb_phone.Text = Phone;
                     if (Address != null)
                         tb_address.Text = Address;
+                    if (Image != null)
+                        img_profPic.Src = Image;
                 }
             }
             catch { }
@@ -99,14 +100,63 @@ namespace Vegifruit_Part_1
             String fName = tb_firstName.Text;
             String lName = tb_lastName.Text;
 
-            // UPDATE SET UserName=@user, FirstName=@fname
-            // cmd.Parameters.AddWithValue("@user", UserName);
+            String qry = "UPDATE SET " +
+                "UserName=@user, " +
+                "FirstName=@fname, " +
+                "LastName=@lname, " +
+                "WHERE Email=@email";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@user", UserName);
+            cmd.Parameters.AddWithValue("@fname", fName);
+            cmd.Parameters.AddWithValue("@lname", lName);
+            cmd.Parameters.AddWithValue("@email", Email);
+
+            try
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch { }
+            finally
+            {
+                cmd.Dispose();
+                if (con.State == ConnectionState.Open) con.Close();
+            }
         }
 
         protected void saveContacts_Click(object sender, EventArgs e)
         {
             String Addresss = tb_address.Text;
             String Phone = tb_phone.Text;
+
+            String qry = "UPDATE SET " +
+                "AddressL1=@addr, " +
+                "Phone=@phone" +
+                "WHERE Email=@email";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@addr", Addresss);
+            cmd.Parameters.AddWithValue("@phone", Phone);
+            cmd.Parameters.AddWithValue("@email", tb_email.Text);
+
+            try
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch { }
+            finally
+            {
+                cmd.Dispose();
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+
         }
+
+        protected void fillAnalysis()
+        {
+
+        }
+
+
     }
 }
