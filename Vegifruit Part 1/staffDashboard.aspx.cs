@@ -74,7 +74,7 @@ namespace Vegifruit_Part_1
         }
         protected void LoadPieChart()
         {
-            //GetHashCode the virtual table from the database
+            //GetHashCode the virtual table from the database for the transaction category_wise
 
             string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND status='Pending' ORDER BY productState.updateDate";
 
@@ -88,6 +88,26 @@ namespace Vegifruit_Part_1
             SqlDataReader sdr = cmd.ExecuteReader();
 
             Chart_Pie.DataBindTable(sdr, "updateDate");
+
+            sdr.Close();
+        }
+
+        protected void LoadColumnChart()
+        {
+            //GetHashCode the virtual table from the database for vastage harvest
+
+            string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND status='vasted' ORDER BY productState.updateDate";
+
+            SqlCommand cmd = new SqlCommand(qry, con);
+
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            if (con.State == ConnectionState.Closed) con.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            Chart_Column.DataBindTable(sdr, "updateDate");
 
             sdr.Close();
         }

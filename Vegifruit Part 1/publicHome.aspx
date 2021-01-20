@@ -19,7 +19,7 @@
 <body id="page-top">
     <form id="Home" runat="server">
         <div id="wrapper">
-                    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #343434;">
+                 <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #343434;">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                     <div class="sidebar-brand-icon rotate-n-15"><img class="img-fluid" src="assets/img/Vegi%20Fruits%20Logo%20-%20Footer.svg" style="margin-top: 65px;margin-right: 0px;margin-left: -23px;"/></div>
                 </a>
