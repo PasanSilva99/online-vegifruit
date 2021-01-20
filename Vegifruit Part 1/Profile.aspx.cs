@@ -69,12 +69,19 @@ namespace Vegifruit_Part_1
                     String Image = sdr.GetString(9);
                     String Phone = sdr.GetString(11);
 
-                    tb_email.Text = email;
-                    tb_UserName.Text = name;
-                    tb_firstName.Text = fname;
-                    tb_lastName.Text = lname;
-                    tb_phone.Text = Phone;
 
+                    if(email!=null)
+                        tb_email.Text = email;
+                    if(name!=null)
+                        tb_UserName.Text = name;
+                    if(fname!=null)
+                        tb_firstName.Text = fname;
+                    if(lname!=null)
+                        tb_lastName.Text = lname;
+                    if(Phone!=null)
+                        tb_phone.Text = Phone;
+                    if (Address != null)
+                        tb_address.Text = Address;
                 }
             }
             catch { }

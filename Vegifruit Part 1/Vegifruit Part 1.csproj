@@ -120,7 +120,6 @@
     <Content Include="Global.asax" />
     <Content Include="harvestanalyse.aspx" />
     <Content Include="harvestmap.aspx" />
-    <Content Include="harvestMapKeells.aspx" />
     <Content Include="keellsDashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProducts.aspx" />
@@ -314,13 +313,6 @@
     </Compile>
     <Compile Include="harvestmap.aspx.designer.cs">
       <DependentUpon>harvestmap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="harvestMapKeells.aspx.cs">
-      <DependentUpon>harvestMapKeells.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="harvestMapKeells.aspx.designer.cs">
-      <DependentUpon>harvestMapKeells.aspx</DependentUpon>
     </Compile>
     <Compile Include="keellsDashboard.aspx.cs">
       <DependentUpon>keellsDashboard.aspx</DependentUpon>

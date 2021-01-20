@@ -172,7 +172,7 @@
                         <div class="col-lg-7 col-xl-8">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary font-weight-bold m-0">Earnings Overview</h6>
+                                    <h6 class="text-primary font-weight-bold m-0">Successfull Transactions(All)</h6>
                                     <div class="dropdown no-arrow"><asp:button runat="server" ID="btn1" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"/><i class="fas fa-ellipsis-v text-gray-400"></i>
                                         <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
@@ -180,8 +180,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                <!-- Revenue Chart-->
+                                <div class="card-body" style="width:600px!important">
+                                    <div style="width:600px">
+                                        <asp:Chart ID="Chart_Successfull" runat="server" Width="600">
+                                            <Series>
+                                                
+                                            </Series>
+                                            <ChartAreas>
+                                                <asp:ChartArea Name="Successfull"></asp:ChartArea>
+                                            </ChartAreas>
+                                        </asp:Chart>
+                                       </div>
                                 </div>
                             </div>
                         </div>
@@ -197,15 +207,22 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!--pie Chart for the seperate, category wise-->
                                 <div class="card-body">
-                                    <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:
-                                        [&quot;Vegitable&quot;,&quot;Fruits&quot;,&quot;Paddy&Grains&quot;quot;Meat&Fish&quot],&quot;datasets&quot;:
-                                        [{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:
-                                        [&quot;#382933&quot;,&quot;#3B5249&quot;,&quot;#519872&quot;#A4B494&quot;],&quot;borderColor&quot;:
-                                        [&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;&quot;#ffffff&quot;],&quot;data&quot;:
-                                        [&quot;48&quot;,&quot;29&quot;,&quot;15&quot;,&quot;8&quot;]}]},&quot;options&quot;:
-                                        {&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:
-                                        {&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div>
+                                    <div class="chart-area">
+                                     <div>
+                                         <asp:Chart ID="Chart1" runat="server">
+                                             <Series>
+                                                 
+                                             </Series>
+                                             <ChartAreas>
+                                                 <asp:ChartArea Name="Successful_one"></asp:ChartArea>
+                                             </ChartAreas>
+                                         </asp:Chart>
+
+                                     </div>
+                                        </div>
                                     <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Vegitable</span><span class="mr-2"><i class="fas fa-circle text-success"></i>&nbsp;Fruits</span>
                                         <span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Paddy&Grains</span>
                                         <span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Fish&Meat</span>
@@ -221,97 +238,27 @@
                                     <h6 class="text-primary font-weight-bold m-0">Harvest Vastages(monthly)</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Vegitables<span class="float-right">20%</span></h4>
+                                    <h4 class="small font-weight-bold">Vegitables<span class="float-right">68%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">20%</span></div>
+                                        <div class="progress-bar bg-warning" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"><span class="sr-only">68%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Fruits<span class="float-right">40%</span></h4>
+                                    <h4 class="small font-weight-bold">Fruits<span class="float-right">27%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
+                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 27%;"><span class="sr-only">27%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Paddy&Grains<span class="float-right">60%</span></h4>
+                                    <h4 class="small font-weight-bold">Paddy&Grains<span class="float-right">1%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60%</span></div>
+                                        <div class="progress-bar bg-warning" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Fish&meals<span class="float-right">80%</span></h4>
+                                    <h4 class="small font-weight-bold">Fish&meals<span class="float-right">4%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
+                                        <div class="progress-bar bg-warning" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 4%;"><span class="sr-only">4%</span></div>
                                     </div>
                                   
                                 </div>
                             </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="text-primary font-weight-bold m-0">Todo List</h6>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Pending Vegitables</strong></h6><span class="text-xs">10:30 AM</span>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><asp:TextBox runat="server" ID="chck" class="custom-control-input" type="checkbox" /><label class="custom-control-label" for="formCheck-1"></label></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">11:30 AM</span>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><asp:TextBox runat="server" ID="custm" class="custom-control-input" type="checkbox" /><label class="custom-control-label" for="formCheck-2"></label></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2">
-                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">12:30 AM</span>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><asp:TextBox runat="server" ID="f" class="custom-control-input" type="checkbox"/><label class="custom-control-label" for="formCheck-3"></label></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-primary shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Primary</p>
-                                            <p class="text-white-50 small m-0">#4e73df</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-success shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Success</p>
-                                            <p class="text-white-50 small m-0">#1cc88a</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-info shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Info</p>
-                                            <p class="text-white-50 small m-0">#36b9cc</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-warning shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Warning</p>
-                                            <p class="text-white-50 small m-0">#f6c23e</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            
+                      
                                
                               
                             </div>
