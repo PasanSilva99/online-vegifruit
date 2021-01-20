@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
     <link rel="stylesheet" href="assets/css/Team-Clean.css" />
 
-
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7M0TI9M3e5yWaKWDQj5imEejUFrJnKRA&callback=initMap&libraries=&v=weekly"
+    defer></script>
 
 
 </head>
 <body id="page-top">
-    <form id="map" runat="server">
+    <form id="staffMap" runat="server">
         <div id="wrapper">
             <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(37,38,37);">
                 <div class="container-fluid d-flex flex-column p-0">
@@ -116,17 +118,17 @@
                             </div>
                             <div class="card-body" style="width: 100%; height: 70vh; border-color: rgb(33,46,143);">
                                 <div class="d-flex flex-row flex-shrink-0" style="width: 100%; height: 70vh; color: var(--cyan); background: #a72626;">
-                                    <div class="d-xl-flex bg-danger" style="width: 30%; height: 70vh; color: var(--success); background: var(--white); margin-bottom: 10px;">
-                                        <div class="card">
-                                            <div class="card-header w-100">
-                                                <span>Rice 10KG</span>
-                                            </div>
-                                        </div>
+                                    <div runat="server" id="mapCardLoader" class="d-flex bg-danger flex-column" style="overflow: scroll; width: 30%; height: 70vh; color: var(--success); background: var(--white); margin-bottom: 10px;">
+                                        
+                                        
+                                        
                                     </div>
 
                                     <!--Map Loader-->
-                                    <div runat="server" id="map_loader" class="bg-dark" style="width: 70%;height: 70vh;">
-                                            
+                                    <div runat="server" id="map_loader" class="bg-dark flex" style="width: 70%;height: 70vh;">
+                                        
+                                        
+
                                     </div>
 
                                 </div>

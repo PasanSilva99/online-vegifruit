@@ -284,6 +284,7 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DAO.cs" />
     <Compile Include="dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
@@ -336,6 +337,7 @@
       <DependentUpon>MyProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="poduct.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
