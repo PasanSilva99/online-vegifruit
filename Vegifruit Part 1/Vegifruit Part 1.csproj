@@ -120,11 +120,14 @@
     <Content Include="Global.asax" />
     <Content Include="harvestanalyse.aspx" />
     <Content Include="harvestmap.aspx" />
+    <Content Include="harvestMapKeells.aspx" />
+    <Content Include="keellsDashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyProducts.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="publicHome.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="reportsKeells.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -312,6 +315,20 @@
     <Compile Include="harvestmap.aspx.designer.cs">
       <DependentUpon>harvestmap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="harvestMapKeells.aspx.cs">
+      <DependentUpon>harvestMapKeells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="harvestMapKeells.aspx.designer.cs">
+      <DependentUpon>harvestMapKeells.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="keellsDashboard.aspx.cs">
+      <DependentUpon>keellsDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="keellsDashboard.aspx.designer.cs">
+      <DependentUpon>keellsDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -348,6 +365,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportsKeells.aspx.cs">
+      <DependentUpon>reportsKeells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportsKeells.aspx.designer.cs">
+      <DependentUpon>reportsKeells.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
