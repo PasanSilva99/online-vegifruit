@@ -44,7 +44,7 @@
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
                 <div class="container d-xl-flex align-items-xl-end">
                     <div class="row d-xl-flex align-items-xl-end">
-                        <div class="col d-xl-flex align-items-xl-end" style="width: 215px;height: 120px;"><img class="img-fluid" style="background: url(&quot;assets/img/DoA%20Logo.png&quot;);width: 188px;" src="assets/img/DoA%20Logo.png"/></div>
+                        <div class="col d-xl-flex align-items-xl-end" style="width: 215px;height: 120px;"><img class="img-fluid" style="background: url(&quot;assets/img/DoA%20Logo.png&quot;);width: 188px;" /></div>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Dashboard</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                        <h3 class="text-dark mb-0">Dashboard Department of Agriculture</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4">
@@ -266,13 +266,8 @@
                     </div>
                 </div>
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
-                </div>
-            </footer>
+
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-        </div>
         </form>
      <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -282,5 +277,66 @@
     <script src="assets/js/theme.js"></script>
     
 </body>
+ <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><img class="img-fluid ml-4" style="width: 109px;height: 68px;" src="assets/img/Vegi%20Fruits%20Logo%20-%20Footer.svg"/>
+                                    <p class="text-monospace text-left text-sm-left text-dark ml-5" style="font-size: 13px;font-family: Nunito, sans-serif;padding: -3px;"><strong>ONLINE MARKET</strong></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="text-monospace text-center text-sm-left text-dark ml-3" style="font-size: 11px;font-family: Acme, sans-serif;padding: 1px;margin: 2px;"><strong>NATURAL | ORGANIC | FRESH</strong></p><i class="fa fa-phone ml-3"></i><span class="ml-2" style="font-size: 12px;"><a class="text-dark text-decoration-none" href="tel: +94 322245459">+94 322245459</a></span>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="ml-3">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"></path>
+                                                            </svg><span class="ml-2" style="font-size: 12px;"><a class="text-dark text-decoration-none" href="mailto: vegifruits@gmail.com">vegifruits@gmail.com</a></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row pt-3">
+                                <div class="col">
+                                    <h1 class="text-left text-dark pl-4" style="font-size: 19px;font-family: Audiowide, cursive;">Quick Links</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="pr-3" style="text-align: left;">
+                                        <li><a class="text-decoration-none text-dark" href="https://www.doa.gov.lk/">Department of Agriculture</a></li>
+                                        <li><a class="text-decoration-none text-dark" href="https://www.keellssuper.com">Keels</a></li>
+                                        <li><a class="text-decoration-none text-dark" href="http://www.agrimin.gov.lk">Ministry of Agriculture</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col pt-3">
+                                            <h1 class="text-left text-dark pl-2" style="font-size: 19px;font-family: Audiowide, cursive;">Authorized By</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><img class="img-fluid" src="assets/img/Keells_Super_logo_1.png" style ="width:50%;"/><img class="img-fluid" src="assets/img/DoA%20Logo.png" style ="width:50%;"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 </html>
 
