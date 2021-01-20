@@ -180,6 +180,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- Revenue Chart-->
                                 <div class="card-body" style="width:600px!important">
                                     <div style="width:600px">
@@ -195,10 +196,11 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-5 col-xl-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary font-weight-bold m-0">Successful Transaction</h6>
+                                    <h6 class="text-primary font-weight-bold m-0">Successful Transaction <br/>(Category_wise_Monthly)</h6>
                                     <div class="dropdown no-arrow"><asp:button runat="server" ID="btn2" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></asp:button>
                                         <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item"
@@ -231,6 +233,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Bar chart onformchange Vastage harvest-->
                     <div class="row">
                         <div class="col-lg-6 mb-4">
                             <div class="card shadow mb-4">
@@ -238,26 +242,22 @@
                                     <h6 class="text-primary font-weight-bold m-0">Harvest Vastages(monthly)</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Vegitables<span class="float-right">68%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"><span class="sr-only">68%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Fruits<span class="float-right">27%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 27%;"><span class="sr-only">27%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Paddy&Grains<span class="float-right">1%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Fish&meals<span class="float-right">4%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 4%;"><span class="sr-only">4%</span></div>
-                                    </div>
+                                    <div class="chart-area">
+                                        <div>
+                                            <asp:Chart ID="Chart_Column" runat="server" chartType="Column">
+                                                <Series>
+                                                    
+                                                </Series>
+                                                <ChartAreas>
+                                                    <asp:ChartArea Name="Vastage_Harvest"></asp:ChartArea>
+                                                </ChartAreas>
+                                            </asp:Chart>
+
+                                        </div>   
                                   
                                 </div>
                             </div>
-                            
+                            </div>
                       
                                
                               
