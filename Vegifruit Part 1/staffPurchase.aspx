@@ -43,7 +43,7 @@
                 <div class="text-center d-none d-md-inline"><asp:button runat="server" class="btn rounded-circle border-0" id="sidebarToggle" type="button"></asp:button></div>
                 <div class="container d-xl-flex align-items-xl-end">
                     <div class="row d-xl-flex align-items-xl-end">
-                        <div class="col d-xl-flex align-items-xl-end" style="width: 215px;height: 120px;"><img class="img-fluid" style="background: url(&quot;assets/img/DoA%20Logo.png&quot;);width: 188px;" src="assets/img/DoA%20Logo.png"/></div>
+                        <div class="col d-xl-flex align-items-xl-end" style="width: 215px;height: 120px;"><img class="img-fluid" style="background: url(&quot;assets/img/DoA%20Logo.png&quot;);width: 188px;" /></div>
                     </div>
                 </div>
             </div>
@@ -176,14 +176,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
-                </div>
-            </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
             </div>
         </div>
