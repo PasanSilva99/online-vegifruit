@@ -9,6 +9,8 @@ using System.Data.SqlClient;
 
 namespace Vegifruit_Part_1
 {
+
+
     public partial class staffDashboard : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\VegiFruit\VegifruitDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -45,12 +47,16 @@ namespace Vegifruit_Part_1
 
 
             LoadChart();
+            Chart_Successfull.Series[0].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Area;
+            LoadPieChart();
+            Chart_Pie.Series[0].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Pie;
+
         }
         protected void LoadChart()
         {
             //GetHashCode the virtual table from the database
 
-            string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND  status='Pending' ORDER BY productState.updateDate";
+            string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND status='Pending' ORDER BY productState.updateDate";
 
             SqlCommand cmd = new SqlCommand(qry,con);
            
@@ -62,12 +68,15 @@ namespace Vegifruit_Part_1
             SqlDataReader sdr = cmd.ExecuteReader();
 
             Chart_Successfull.DataBindTable(sdr, "updateDate");
+
+            sdr.Close();
+
         }
         protected void LoadPieChart()
         {
             //GetHashCode the virtual table from the database
 
-            string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND  status='Pending' ORDER BY productState.updateDate";
+            string qry = "SELECT product.price, productState.updateDate FROM product INNER JOIN productState ON productState.productID = product.id AND status='Pending' ORDER BY productState.updateDate";
 
             SqlCommand cmd = new SqlCommand(qry, con);
 
@@ -78,7 +87,9 @@ namespace Vegifruit_Part_1
 
             SqlDataReader sdr = cmd.ExecuteReader();
 
-            Chart_Successfull.DataBindTable(sdr, "updateDate");
+            Chart_Pie.DataBindTable(sdr, "updateDate");
+
+            sdr.Close();
         }
 
     }
