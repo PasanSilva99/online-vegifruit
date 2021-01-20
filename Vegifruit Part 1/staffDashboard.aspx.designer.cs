@@ -78,12 +78,12 @@ namespace Vegifruit_Part_1
         protected global::System.Web.UI.WebControls.Button btn2;
 
         /// <summary>
-        /// Chart1 control.
+        /// Chart_Pie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart_Pie;
     }
 }

@@ -212,7 +212,7 @@
                                 <div class="card-body">
                                     <div class="chart-area">
                                      <div>
-                                         <asp:Chart ID="Chart1" runat="server">
+                                         <asp:Chart ID="Chart_Pie" runat="server">
                                              <Series>
                                                  
                                              </Series>

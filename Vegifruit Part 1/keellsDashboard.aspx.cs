@@ -26,7 +26,7 @@ namespace Vegifruit_Part_1
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\VegiFruit\VegifruitDB.mdf;Integrated Security=True;Connect Timeout=30");
 
         String DispayName = "";
-        String NIC = " ";
+        
 
         /// <summary>
         /// Che wether the session is null.
